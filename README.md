@@ -1,6 +1,6 @@
 # CIFAR-10 FastAPI Web App with Grad-CAM
 
-![Project Screenshot](app/static/screenshot.png)  
+![Project Screenshot](app/static/webpage.png)  
 *Web interface showing CIFAR-10 predictions and Grad-CAM visualization.*
 
 This project is a **full-stack AI demo** combining **FastAPI**, **TensorFlow**, and **CIFAR-10 image classification**. It demonstrates building a responsive web app for image prediction with **explainable AI features**.
