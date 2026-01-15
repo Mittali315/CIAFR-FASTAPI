@@ -40,7 +40,7 @@ cifar10-fastapi-app/
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/cifar10-fastapi-app.git
+git clone https://github.com/Mittali315/cifar10-fastapi-app.git
 cd cifar10-fastapi-app
 pip install -r requirements.txt
 
