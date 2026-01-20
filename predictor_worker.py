@@ -29,6 +29,23 @@ if __name__ == "__main__":
 
         model = load_model("models/cifar10_cnn_model.keras")
 
+        # Diagnostic: print model summary and conv layer names to help debugging
+        try:
+            model.summary(print_fn=lambda s: print(s))
+        except Exception:
+            # fallback if model doesn't implement summary
+            try:
+                print(str(model))
+            except Exception:
+                pass
+
+        # list conv-like layers
+        try:
+            conv_names = [l.name for l in getattr(model, 'layers', []) if 'conv' in l.__class__.__name__.lower() or 'conv' in getattr(l, 'name', '').lower()]
+            print('CONV_LAYERS:', json.dumps(conv_names))
+        except Exception:
+            pass
+
         preds = model.predict(img_array)
         predicted_class = CLASS_NAMES[int(np.argmax(preds))]
         confidence = float(np.max(preds))

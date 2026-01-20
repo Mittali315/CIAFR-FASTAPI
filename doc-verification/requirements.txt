@@ -1,0 +1,10 @@
+passlib>=1.7.4
+argon2-cffi>=25.1.0
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+python-jose
+passlib[argon2]
+python-dotenv
+
