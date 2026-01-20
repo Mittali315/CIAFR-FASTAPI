@@ -1,3 +1,0 @@
-list = [1, 2, 3, 4]
-list[0], list[1] = list[1], list[0]
-print(list)  # Output: [2, 1, 3, 4]
